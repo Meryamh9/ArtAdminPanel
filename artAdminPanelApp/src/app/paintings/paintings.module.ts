@@ -5,12 +5,14 @@ import { PaintingsRoutingModule } from './paintings-routing.module';
 import { PaintingsComponent } from './paintings.component';
 import { SharedModule } from '../shared/shared.module';
 import { PaintignsListComponent } from './pages/paintigns-list/paintigns-list.component';
+import { PaintingFormComponent } from './pages/painting-form/painting-form.component';
 
 
 @NgModule({
   declarations: [
     PaintingsComponent,
-    PaintignsListComponent
+    PaintignsListComponent,
+    PaintingFormComponent
   ],
   imports: [
     CommonModule,

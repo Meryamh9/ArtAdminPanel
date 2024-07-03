@@ -16,4 +16,12 @@
   z-index: 1;
 }
 
-
+  
+.example-button-row {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 10px; /* Ajuste cette valeur pour définir la distance par rapport au bas de la page */
+  margin-left: 35px;
+  margin-bottom: 30px;
+}
