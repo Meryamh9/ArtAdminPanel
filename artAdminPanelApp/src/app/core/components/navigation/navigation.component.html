@@ -9,23 +9,12 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Tableau de bord</a>
+      <h2>Logo</h2>
+      <a mat-list-item href="admin-dashboard">Tableau de bord</a>
       <a mat-list-item href="#">Clients</a>
       <a mat-list-item href="#">Tableaux</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>artAdminPanelApp</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-  </mat-sidenav-content>
+  <ng-content></ng-content>
+
 </mat-sidenav-container>

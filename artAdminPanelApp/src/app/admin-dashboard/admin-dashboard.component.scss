@@ -1,137 +1,83 @@
-:host {
-  display: flex;
-}
+// styles.scss
 
-.sidebar {
-  width: 200px;
-  background-color: #f0f1ff;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  .logo {
-    h2 {
-      font-size: 24px;
-      color: #4a4a4a;
-    }
-  }
-
-  nav {
-    width: 100%;
-    margin-top: 20px;
-
-    .nav-item {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      width: 100%;
-      color: #4a4a4a;
-      text-decoration: none;
-      transition: background 0.3s;
-
-      &:hover {
-        background-color: #ddd;
-      }
-
-      .icon {
-        margin-right: 10px;
-      }
-
-      span {
-        font-size: 14px;
-      }
-    }
-  }
-
-  .logout-button {
-    background-color: #4a4a4a;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-
-    &:hover {
-      background-color: #333;
-    }
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
 }
 
 .dashboard-container {
-  flex: 1;
-  background-color: #f8f9ff;
-  padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligner le contenu en haut */
+  padding: 20px;
+  background-color: #fafafa;
+  min-height: 100vh; /* S'assurer que le conteneur prend toute la hauteur de la page */
+  padding-top: 40px; /* Ajouter un padding en haut pour éloigner du bord supérieur */
+}
 
-  .header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 20px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
 
-    .user-initials {
-      width: 40px;
-      height: 40px;
-      background-color: #ddd;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      margin-right: 10px;
-    }
+.header h1 {
+  font-size: 28px; /* Plus grand et plus gras */
+  color: #4a4a8a; /* Violet */
+  font-weight: bold; /* Plus gras */
+}
 
-    .username {
-      font-size: 16px;
-      color: #4a4a4a;
-    }
-  }
+.header span {
+  font-size: 18px;
+  color: #707070; /* Plus doux */
+}
 
-  .content {
-    h1 {
-      font-size: 24px;
-      color: #4a4a4a;
-      margin-bottom: 20px;
-    }
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* Ajouter un petit écart entre les blocs */
+  width: 100%;
+  max-width: 1200px; /* Limiter la largeur maximale */
+}
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+.card {
+  background-color: #ffffff;
+  padding: 20px; /* Ajuster la taille des blocs */
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #f5f5f5; /* Ajouter une bordure pour séparer les blocs */
+}
 
-      .card {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 20px;
-        flex: 1;
-        min-width: 200px;
-        text-align: center;
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4a4a8a; /* Plus doux */
+}
 
-        &.big-card {
-          flex: 2;
-          background-color: #5f5dff;
-          color: #fff;
+.card p {
+  font-size: 22px; /* Réduire légèrement */
+  margin: 0;
+}
 
-          h2 {
-            color: #fff;
-          }
-        }
+.card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #4a4a8a; /* Violet */
+  color: white;
+  font-size: 30px;
+}
 
-        h2 {
-          font-size: 16px;
-          margin-bottom: 10px;
-        }
-
-        p {
-          font-size: 24px;
-          margin: 0;
-        }
-      }
-    }
-  }
+.card.large h2, .card.large p {
+  color: white;
 }
