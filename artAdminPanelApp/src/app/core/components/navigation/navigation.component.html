@@ -13,6 +13,10 @@
       <a mat-list-item href="#">Tableau de bord</a>
       <a mat-list-item href="#">Clients</a>
       <a mat-list-item href="#">Tableaux</a>
+      <a mat-list-item href="">Tableau de bord</a>
+      <a mat-list-item href="">Clients</a>
+      <a mat-list-item href="tableaux">Tableaux</a>
+      <a mat-list-item class="logout-button">Déconnexion</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -30,6 +34,9 @@
     </mat-toolbar>
     <!-- Add Content Here -->
     <div class="flex-grow-1">
+      <ng-content></ng-content>
+    </div>
+    <div class="flex-grow-1" style="margin-left: 20px; margin-top: 20px; margin-right: 20px;">
       <ng-content></ng-content>
     </div>
   </mat-sidenav-content>

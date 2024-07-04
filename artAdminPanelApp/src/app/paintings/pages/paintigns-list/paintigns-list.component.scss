@@ -1,0 +1,67 @@
+.painting-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* Ajoutez cette ligne pour permettre le positionnement absolu des boutons */
+  }
+  
+  .painting-card mat-card-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .painting-card mat-card-header img {
+    height: 80px;
+    width: 80px;
+    margin-right: 16px;
+    border-radius: 4px;
+  }
+  
+  .painting-card .header-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .painting-card .divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 8px 0;
+    width: 100%;
+  }
+  
+  .painting-card mat-card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .painting-card .price {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+  }
+  
+  .painting-card .price .price-label {
+    font-size: 1.2em; /* Taille du texte du label Prix */
+    font-weight: bold;
+  }
+  
+  .painting-card .price .price-value {
+    font-size: 1.5em; /* Taille du texte de la valeur du prix */
+    margin-left: 4px; /* Espacement entre le label et la valeur */
+  }
+  
+  /* Ajout des styles pour positionner les boutons en haut à droite */
+  .painting-card .header-actions {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 8px; /* Espacement entre les boutons */
+  }
+  
+  .painting-card .header-actions button {
+    min-width: 36px; /* Taille minimale des boutons pour qu'ils soient carrés */
+    min-height: 36px;
+    line-height: 36px;
+  }
+  

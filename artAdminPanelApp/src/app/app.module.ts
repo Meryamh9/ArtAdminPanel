@@ -20,6 +20,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     BrowserAnimationsModule,
     CoreModule,
     FormsModule  ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
