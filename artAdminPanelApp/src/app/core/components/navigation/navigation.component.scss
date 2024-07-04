@@ -1,19 +1,133 @@
+// styles.scss
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
 .sidenav-container {
-  height: 100%;
+  height: 100vh;
+  background-color: #fafafa;
 }
 
 .sidenav {
-  width: 200px;
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
+.sidenav mat-toolbar {
+  background-color: #4a4a8a;
+  color: white;
+  text-align: center;
+}
+
+.sidenav mat-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidenav h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #4a4a8a;
+  text-align: center;
+}
+
+.sidenav a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #4a4a8a;
+  font-size: 16px;
+  text-align: center;
+}
+
+mat-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-spacer {
+  flex-grow: 1;
+}
+
+.header {
+  font-size: 18px;
+  color: #707070;
+}
+
+
+
+.flex-grow-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #fafafa;
+  min-height: calc(100vh - 64px); /* Adjust according to toolbar height */
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #f5f5f5;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4a4a8a;
+}
+
+.card p {
+  font-size: 22px;
+  margin: 0;
+}
+
+.card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #4a4a8a;
+  color: white;
+  font-size: 30px;
+}
+
+.card.large h2, .card.large p {
+  color: white;
 }
 
 .mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  background: white;
+  color : #4a4a8a;
+  text-align: right;
+}
+
+.header span {
+  font-size: 18px;
+  color: #4a4a8a;
+  font-weight: bold;
+  text-align: right;
 }
 
   

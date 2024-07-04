@@ -8,17 +8,16 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  username: string = 'admin';
-  password: string = 'admin123';
-  errorMessage: string | null = null;
+  username: string = '';
+  password: string = '';
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {}
 
-  login() {
+  onSubmit(): void {
     if (this.authService.login(this.username, this.password)) {
       this.router.navigate(['/admin-dashboard']);
     } else {
-      this.errorMessage = 'Invalid username or password';
+      alert('Nom d\'utilisateur ou mot de passe incorrect');
     }
   }
 }
