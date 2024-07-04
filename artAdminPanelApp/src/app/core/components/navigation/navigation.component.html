@@ -10,11 +10,27 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <h2>Logo</h2>
-      <a mat-list-item href="admin-dashboard">Tableau de bord</a>
+      <a mat-list-item href="#">Tableau de bord</a>
       <a mat-list-item href="#">Clients</a>
       <a mat-list-item href="#">Tableaux</a>
     </mat-nav-list>
   </mat-sidenav>
-  <ng-content></ng-content>
-
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div class="header">
+        <span>John Doe</span>
+      </div>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+      </button>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div class="flex-grow-1">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
