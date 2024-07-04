@@ -25,3 +25,10 @@
   margin-left: 35px;
   margin-bottom: 30px;
 }
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px; // Espace entre l'icône et le nom de l'utilisateur
+  margin-left: auto;
+}

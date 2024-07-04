@@ -1,29 +1,31 @@
 <div class="example-button-row">
-  <button mat-raised-button color="accent"><mat-icon>add</mat-icon>Ajouter un tableau</button>
+  <button mat-raised-button color="accent" (click)="openPaintingForm()">
+    <mat-icon>add</mat-icon>Ajouter un tableau
+  </button>
 </div>
 <mat-card class="painting-card">
-    <mat-card-header>
-      <img mat-card-avatar src="path/to/your/image.jpg" alt="Painting Image">
-      <div class="header-content">
-        <div mat-card-title>Painting Title</div>
-        <div mat-card-subtitle>Painting Description</div>
-        <hr class="divider">
-        <div mat-card-title>Date</div>
-        <div mat-card-subtitle>Description</div>
-      </div>
-      <div class="header-actions">
-        <button mat-icon-button color="primary">
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-icon-button color="warn">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </div>
-    </mat-card-header>
-    <mat-card-footer>
-      <div class="price">
-        <span class="price-label">Prix: </span><span class="price-value">$100</span>
-      </div>
-    </mat-card-footer>
-  </mat-card>
-  
+  <mat-card-header>
+    <img mat-card-avatar src="path/to/your/image.jpg" alt="Painting Image" />
+    <div class="header-content">
+      <div mat-card-title>Painting Title</div>
+      <div mat-card-subtitle>Painting Description</div>
+      <hr class="divider" />
+      <div mat-card-title>Date</div>
+      <div mat-card-subtitle>Description</div>
+    </div>
+    <div class="header-actions">
+      <button mat-icon-button color="primary" (click)="openPaintingForm()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-card-header>
+  <mat-card-footer>
+    <div class="price">
+      <span class="price-label">Prix: </span
+      ><span class="price-value">$100</span>
+    </div>
+  </mat-card-footer>
+</mat-card>
