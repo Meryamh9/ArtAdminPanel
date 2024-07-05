@@ -6,6 +6,7 @@ import { PaintingFormComponent } from '../painting-form/painting-form.component'
 import { Observable } from 'rxjs';
 
 export interface DialogData {
+  isCreateForm: any;
   animal: 'panda' | 'unicorn' | 'lion';
 }
 @Component({
@@ -31,7 +32,7 @@ export class PaintignsListComponent {
   openPaintingForm() {
     const dialogRef = this.dialog.open(PaintingFormComponent, {
       height: '85%',
-      width: '60%',
+      width: '50%',
       data: {
         animal: 'panda',
         // isCreateForm: painting ? false : true,
@@ -46,5 +47,16 @@ export class PaintignsListComponent {
       }
     });
 
+}
+
+confirmDelete(): void {
+  if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
+    this.deleteItem();
+  }
+}
+
+deleteItem(): void {
+  // Logic for deleting the item
+  console.log('Item deleted');
 }
 }
