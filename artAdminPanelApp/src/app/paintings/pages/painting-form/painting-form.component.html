@@ -1,4 +1,49 @@
-<mat-dialog-content>
-  test
-      
-  </mat-dialog-content>
+<h2 mat-dialog-title>{{ title }}</h2>
+<form [formGroup]="paintingForm" (ngSubmit)="onSubmit()">
+  <div class="space">
+    <mat-form-field appearance="fill">
+      <mat-label>Titre</mat-label>
+      <input matInput formControlName="titre" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Méthode</mat-label>
+      <input matInput formControlName="methode" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Longueur</mat-label>
+      <input matInput formControlName="longueur" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Largeur</mat-label>
+      <input matInput formControlName="largeur" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Date de création</mat-label>
+      <input matInput formControlName="dateCreation" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Quantité</mat-label>
+      <input matInput formControlName="quantite" />
+    </mat-form-field>
+
+    <mat-dialog-actions align="end">
+      <button mat-button type="button" mat-dialog-close>Annuler</button>
+      <button
+        mat-raised-button
+        type="submit"
+        cdkFocusInitial
+        color="warn"
+      >Valider</button>
+    </mat-dialog-actions>
+  </div>
+</form>

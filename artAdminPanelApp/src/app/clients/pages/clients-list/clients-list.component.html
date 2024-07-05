@@ -1,25 +1,39 @@
 <div class="example-button-row">
-    <button mat-raised-button color="accent"><mat-icon>add</mat-icon>Ajouter un client</button>
-  </div>
-  <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-      <mat-expansion-panel-header>
-        <div class="header-buttons">
-          <button mat-icon-button color="primary">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <button mat-icon-button color="warn">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </div>
-        <mat-panel-title>
-          Self aware panel
-        </mat-panel-title>
-        <mat-panel-description>
-          Currently I am {{panelOpenState ? 'open' : 'closed'}}
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>I'm visible because I am open</p>
-    </mat-expansion-panel>
-  </mat-accordion>
-  
+  <button mat-raised-button color="accent" (click)="openClientForm()">
+    <mat-icon>add</mat-icon> Ajouter un client
+  </button>
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <div class="header-buttons">
+        <button mat-icon-button color="primary" (click)="openClientForm(); $event.stopPropagation()" disableRipple>
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="confirmDelete(); $event.stopPropagation()" disableRipple>
+          <mat-icon>delete</mat-icon>
+        </button>
+        
+      </div>
+      <mat-panel-title>
+        <!-- {{client.nom}} {{client.prenom}} -->
+        Nom Prénom
+      </mat-panel-title>
+      <mat-panel-description>
+        <!-- Actuellement je suis {{panelOpenState ? 'ouvert' : 'fermé'}} -->
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div>
+      <p><strong>Adresse:</strong></p>
+      <p><strong>Complément d'adresse:</strong></p>
+      <p><strong>Ville:</strong></p>
+      <p><strong>Code postal:</strong></p>
+      <p><strong>Adresse mail:</strong></p>
+      <p><strong>Téléphone:</strong></p>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

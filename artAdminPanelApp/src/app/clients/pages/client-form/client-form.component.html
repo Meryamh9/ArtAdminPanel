@@ -1,0 +1,54 @@
+<h2 mat-dialog-title>{{ title }}</h2>
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+  <div class="space">
+    <mat-form-field appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput formControlName="nom" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Prénom</mat-label>
+      <input matInput formControlName="prenom" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Adresse</mat-label>
+      <input matInput formControlName="adresse" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Complément d'adresse</mat-label>
+      <input matInput formControlName="complmentAdresse" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ville</mat-label>
+      <input matInput formControlName="ville" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Code postal</mat-label>
+      <textarea matInput formControlName="codePostal"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Adresse mail</mat-label>
+      <input matInput formControlName="adresseMail" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Téléphone</mat-label>
+      <input matInput formControlName="telephone" />
+    </mat-form-field>
+
+    <mat-dialog-actions align="end">
+      <button mat-button type="button" mat-dialog-close>Annuler</button>
+      <button
+        mat-raised-button
+        type="submit"
+        cdkFocusInitial
+        color="warn"
+      >Valider</button>
+    </mat-dialog-actions>
+  </div>
+</form>

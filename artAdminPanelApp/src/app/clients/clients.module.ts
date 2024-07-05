@@ -5,12 +5,14 @@ import { ClientsRoutingModule } from './clients-routing.module';
 import { ClientsComponent } from './clients.component';
 import { ClientsListComponent } from './pages/clients-list/clients-list.component';
 import { SharedModule } from '../shared/shared.module';
+import { ClientFormComponent } from './pages/client-form/client-form.component';
 
 
 @NgModule({
   declarations: [
     ClientsComponent,
-    ClientsListComponent
+    ClientsListComponent,
+    ClientFormComponent
   ],
   imports: [
     CommonModule,
